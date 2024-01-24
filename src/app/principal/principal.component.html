@@ -1,0 +1,54 @@
+<form>
+
+    <label>marca?</label>
+    <input type="text" placeholder="marca" name="marca" [(ngModel)]="cliente.marca">
+
+    <label> modelo?</label>
+    <input type="text"  placeholder="modelo" name="modelo" [(ngModel)]="cliente.modelo">
+
+    <label> cor?</label>
+    <input type="text" placeholder="Procure  a cor" name="cor" [(ngModel)]="cliente.cor">
+
+    <label> ano?</label>
+    <input type="number" placeholder="Procure o ano" name="ano" [(ngModel)]="cliente.ano">
+
+    <label> descricoao?</label>
+    <input type="text" placeholder="descricao" name="descricao" [(ngModel)]="cliente.descricao">
+
+    <input type="button" value="Cadastrar" *ngIf="bntCadastro" (click)="cadastrar()">
+    <input type="button" value="alterar" *ngIf="!bntCadastro" (click)="editar()">
+    <input type="button" value="remover" *ngIf="!bntCadastro" (click)="remover()">
+    <input type="button" value="cancelar" *ngIf="!bntCadastro" (click)="cancelar()">
+
+</form>
+
+
+<table class="table" *ngIf="tabela">
+    <thead> 
+        <tr>
+            <th># </th>
+            <th>marca </th>
+            <th>modelo </th>
+            <th>cor </th>
+            <th>ano </th>
+            <th>descricao </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of clientes; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{c.marca}}</td>
+            <td>{{c.modelo}}</td>
+            <td>{{c.cor}}</td>
+            <td>{{c.ano}}</td>
+            <td>{{c.descricao}}</td>
+            <td><button (click)="selecionarCliente(i)">selecionar</button></td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+
