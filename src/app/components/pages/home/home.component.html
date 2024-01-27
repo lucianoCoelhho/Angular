@@ -1,30 +1,42 @@
-<form>
 
+
+
+
+
+
+<p>pagina home. teste</p>
+
+<div *ngIf="!tabelaCadastro">
     <label>marca?</label>
     <input type="text" placeholder="marca" name="marca" [(ngModel)]="cliente.marca">
+</div>
 
+<div *ngIf="!tabelaCadastro">
     <label> modelo?</label>
-    <input type="text"  placeholder="modelo" name="modelo" [(ngModel)]="cliente.modelo">
+    <input type="text" placeholder="modelo" name="modelo" [(ngModel)]="cliente.modelo">
+</div>
 
+<div *ngIf="!tabelaCadastro">
     <label> cor?</label>
     <input type="text" placeholder="Procure  a cor" name="cor" [(ngModel)]="cliente.cor">
+</div>
 
+<div *ngIf="!tabelaCadastro">
     <label> ano?</label>
     <input type="number" placeholder="Procure o ano" name="ano" [(ngModel)]="cliente.ano">
+</div>
 
+<div *ngIf="!tabelaCadastro">
     <label> descricoao?</label>
     <input type="text" placeholder="descricao" name="descricao" [(ngModel)]="cliente.descricao">
+</div>
 
-    <input type="button" value="Cadastrar" *ngIf="bntCadastro" (click)="cadastrar()">
-    <input type="button" value="alterar" *ngIf="!bntCadastro" (click)="editar()">
-    <input type="button" value="remover" *ngIf="!bntCadastro" (click)="remover()">
-    <input type="button" value="cancelar" *ngIf="!bntCadastro" (click)="cancelar()">
-
-</form>
-
+<input type="button" value="alterar" *ngIf="!bntCadastro" (click)="editar()">
+<input type="button" value="remover" *ngIf="!bntCadastro" (click)="remover()">
+<input type="button" value="cancelar" *ngIf="!bntCadastro" (click)="cancelar()">
 
 <table class="table" *ngIf="tabela">
-    <thead> 
+    <thead>
         <tr>
             <th># </th>
             <th>marca </th>
@@ -48,7 +60,3 @@
     </tbody>
 
 </table>
-
-
-
-

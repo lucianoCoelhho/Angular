@@ -1,0 +1,22 @@
+<form>
+
+    <label>marca?</label>
+    <input type="text" placeholder="marca" name="marca" [(ngModel)]="cliente.marca">
+
+    <label> modelo?</label>
+    <input type="text"  placeholder="modelo" name="modelo" [(ngModel)]="cliente.modelo">
+
+    <label> cor?</label>
+    <input type="text" placeholder="Procure  a cor" name="cor" [(ngModel)]="cliente.cor">
+
+    <label> ano?</label>
+    <input type="number" placeholder="Procure o ano" name="ano" [(ngModel)]="cliente.ano">
+
+    <label> descricoao?</label>
+    <input type="text" placeholder="descricao" name="descricao" [(ngModel)]="cliente.descricao">
+
+    <input type="button" value="Cadastrar" *ngIf="bntCadastro" (click)="cadastrar()">
+
+</form>
+
+   

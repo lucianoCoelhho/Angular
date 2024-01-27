@@ -3,15 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PrincipalComponent } from './principal/principal.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { NewProductComponent } from './components/pages/new-product/new-product.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrincipalComponent
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    NewProductComponent,
+    ProductFormComponent,
+   
   ],  
   imports: [
     BrowserModule,

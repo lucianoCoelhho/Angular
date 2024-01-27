@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { Cliente } from '../modelo/Cliente';
-import { ClienteService } from '../servico/cliente.service';
+import { Cliente } from 'src/app/modelo/Cliente';
+import { ClienteService } from 'src/app/servico/cliente.service';
 
 @Component({
-  selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
-  
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class PrincipalComponent {
+export class HomeComponent {
+[x: string]: any;
+
 
 
   //objeto do tipo cliente
@@ -16,6 +17,8 @@ export class PrincipalComponent {
 
   //varialvel para visibilidade dos botoes
   bntCadastro:boolean = true;
+
+  tabelaCadastro:boolean = true;
 
   //variavel de visibilidade da tabela
   tabela:boolean = true;
@@ -56,6 +59,8 @@ export class PrincipalComponent {
 
     //visibilidade dos botoes
     this.bntCadastro = false;
+
+    this.tabelaCadastro = false;
 
     //visibilidade da tabela
     this.tabela = false;
@@ -141,5 +146,4 @@ export class PrincipalComponent {
   ngOnInit(){
     this.selecionar();
   }
-
-} 
+}
